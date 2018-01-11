@@ -1,0 +1,233 @@
+.wrapper {
+  max-width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.weather {
+  max-width: 800px;
+  height: 600px;
+  color: #fff;
+  text-shadow: 2px 2px 0 black;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  background: url('../img/day.png') no-repeat;
+  //outline: 2px solid #6633FE;
+  z-index: 10;
+
+
+  &__clouds01 {
+    position: absolute;
+    width: 800px;
+    height: 600px;
+    z-index: 30;
+    top: 0;
+    left: 0;
+    background: url('../img/clouds.png') no-repeat;
+    display: none;
+  }
+
+  &__clouds02 {
+    position: absolute;
+    width: 800px;
+    height: 600px;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    
+    background: url('../img/bigclouds.png') no-repeat;
+    display: none;
+  }
+
+    &__rain {
+    position: absolute;
+    width: 800px;
+    height: 600px;
+    z-index: 40;
+    top: 0;
+    left: 0;
+    background: url('../img/rain.gif') repeat;
+    opacity: 0.3;
+    display: none;
+  }
+
+  &__leftlegend {
+    position: absolute;
+    z-index: 50;
+    top: 5px;
+    left: 10px;
+    //min-height: 150px;
+  }
+
+  &__rightlegend {
+    position: absolute;
+    z-index: 50;
+    top: 5px;
+    right: 10px;
+    //min-height: 150px;
+  }
+
+  &__day {
+    display: inline-block;
+    width: 130px;
+  }
+
+  &__today-icon {
+    margin-left: 30px;
+  }
+
+  &__tomorrow-icon {
+    margin-left: 25px;
+  }
+
+  &__dialog {
+    display: none;
+    position: absolute;
+    z-index: 70;
+    left: 100px;
+    top: 200px;
+    padding: 10px;
+    padding-right: 200px;
+    width: 390px;
+    height: 280px;
+    border: 4px solid #fff;
+    border-radius: 5px;
+    background-color: #5e09ab;
+    background-image: url('../img/unicorn-avatar.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    transition: opacity 0.5s ease;
+    opacity: 0.1;
+
+    &--show {
+      display: block;
+      opacity: 1;
+    }
+  }
+
+  &__dialog-overlay {
+    display: none;
+    width: 800px;
+    height: 600px;
+    position: absolute;
+    z-index: 65;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    transition: opacity 0.5s ease;
+    opacity: 0.1;
+
+    &--show {
+      display: block;
+      opacity: 0.7;
+    }
+  }
+
+  &__dialog-close {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    width: 22px;
+    height: 22px;
+    font-size: 0;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+
+    &::before, &::after {
+
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: 2px;
+      width: 19px;
+      height: 3px;
+      background-color: #d0d0d0;
+      border-radius: 1px;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+    
+  }
+
+  &__log {
+    position: absolute;
+    font-size: 10px;
+    z-index: 50;
+    bottom: 10px;
+    left: 50px;
+  }
+
+  &__randomizer {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: url('../img/randomizer.png') no-repeat;
+    z-index: 50;
+    bottom: 45px;
+    color: transparent;
+    left: 50px;
+    cursor: pointer;
+    text-shadow: none;
+    
+    &:hover {
+      bottom: 43px;
+    }
+
+
+  }
+
+
+}
+
+.unicorn {
+  position: absolute;
+  z-index: 60;
+  bottom: 40px;
+  left: 800px;
+  height: 75px;
+  width: 100px;
+  cursor: pointer;
+  background-image: url('../img/unicorn--stay.gif');
+  background-repeat: no-repeat;
+
+    &:hover {
+      opacity: 0.9;
+    }
+
+    &--appear {
+      background-image: url('../img/unicorn--run.gif');
+
+    }
+
+    &--runright {
+      transform: scaleX(-1);
+      background-image: url('../img/unicorn--run.gif');
+
+    }
+
+    &--runleft {
+      background-image: url('../img/unicorn--run.gif');
+
+    }
+
+    &--stayright {
+      background-image: url('../img/unicorn--stay.gif');
+
+    }
+
+    &--stayleft {
+      transform: scaleX(-1);
+      background-image: url('../img/unicorn--stay.gif');
+
+    }
+
+  }

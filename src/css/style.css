@@ -1,0 +1,380 @@
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+a {
+  background-color: transparent;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 1em 40px;
+}
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+pre {
+  overflow: auto;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+button {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input {
+  line-height: normal;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+}
+optgroup {
+  font-weight: bold;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+body {
+  font-family: 'Press Start 2P', 'Arial', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: #fff;
+  background: #003466;
+  background-image: url('../img/body-bg.png');
+}
+.accent-color {
+  color: #9d09ff;
+}
+.wrapper {
+  max-width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.weather {
+  max-width: 800px;
+  height: 600px;
+  color: #fff;
+  text-shadow: 2px 2px 0 black;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  background: url('../img/day.png') no-repeat;
+  z-index: 10;
+}
+.weather__clouds01 {
+  position: absolute;
+  width: 800px;
+  height: 600px;
+  z-index: 30;
+  top: 0;
+  left: 0;
+  background: url('../img/clouds.png') no-repeat;
+  display: none;
+}
+.weather__clouds02 {
+  position: absolute;
+  width: 800px;
+  height: 600px;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  background: url('../img/bigclouds.png') no-repeat;
+  display: none;
+}
+.weather__rain {
+  position: absolute;
+  width: 800px;
+  height: 600px;
+  z-index: 40;
+  top: 0;
+  left: 0;
+  background: url('../img/rain.gif') repeat;
+  opacity: 0.3;
+  display: none;
+}
+.weather__leftlegend {
+  position: absolute;
+  z-index: 50;
+  top: 5px;
+  left: 10px;
+}
+.weather__rightlegend {
+  position: absolute;
+  z-index: 50;
+  top: 5px;
+  right: 10px;
+}
+.weather__day {
+  display: inline-block;
+  width: 130px;
+}
+.weather__today-icon {
+  margin-left: 30px;
+}
+.weather__tomorrow-icon {
+  margin-left: 25px;
+}
+.weather__dialog {
+  display: none;
+  position: absolute;
+  z-index: 70;
+  left: 100px;
+  top: 200px;
+  padding: 10px;
+  padding-right: 200px;
+  width: 390px;
+  height: 280px;
+  border: 4px solid #fff;
+  border-radius: 5px;
+  background-color: #5e09ab;
+  background-image: url('../img/unicorn-avatar.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  transition: opacity 0.5s ease;
+  opacity: 0.1;
+}
+.weather__dialog--show {
+  display: block;
+  opacity: 1;
+}
+.weather__dialog-overlay {
+  display: none;
+  width: 800px;
+  height: 600px;
+  position: absolute;
+  z-index: 65;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  transition: opacity 0.5s ease;
+  opacity: 0.1;
+}
+.weather__dialog-overlay--show {
+  display: block;
+  opacity: 0.7;
+}
+.weather__dialog-close {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  width: 22px;
+  height: 22px;
+  font-size: 0;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+.weather__dialog-close::before,
+.weather__dialog-close::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 2px;
+  width: 19px;
+  height: 3px;
+  background-color: #d0d0d0;
+  border-radius: 1px;
+}
+.weather__dialog-close::before {
+  transform: rotate(45deg);
+}
+.weather__dialog-close::after {
+  transform: rotate(-45deg);
+}
+.weather__log {
+  position: absolute;
+  font-size: 10px;
+  z-index: 50;
+  bottom: 10px;
+  left: 50px;
+}
+.weather__randomizer {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: url('../img/randomizer.png') no-repeat;
+  z-index: 50;
+  bottom: 45px;
+  color: transparent;
+  left: 50px;
+  cursor: pointer;
+  text-shadow: none;
+}
+.weather__randomizer:hover {
+  bottom: 43px;
+}
+.unicorn {
+  position: absolute;
+  z-index: 60;
+  bottom: 40px;
+  left: 800px;
+  height: 75px;
+  width: 100px;
+  cursor: pointer;
+  background-image: url('../img/unicorn--stay.gif');
+  background-repeat: no-repeat;
+}
+.unicorn:hover {
+  opacity: 0.9;
+}
+.unicorn--appear {
+  background-image: url('../img/unicorn--run.gif');
+}
+.unicorn--runright {
+  transform: scaleX(-1);
+  background-image: url('../img/unicorn--run.gif');
+}
+.unicorn--runleft {
+  background-image: url('../img/unicorn--run.gif');
+}
+.unicorn--stayright {
+  background-image: url('../img/unicorn--stay.gif');
+}
+.unicorn--stayleft {
+  transform: scaleX(-1);
+  background-image: url('../img/unicorn--stay.gif');
+}
