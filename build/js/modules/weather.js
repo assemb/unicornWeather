@@ -15,6 +15,7 @@ export default function weatherInit() {
   var weatherTomorrowTemp = weather.querySelector('.weather__tomorrow-temp');
   var weatherTomorrowIcon = weather.querySelector('.weather__tomorrow-icon');
   var weatherLog = weather.querySelector('.weather__log');
+  var weatherFix = weather.querySelector('.weather__fix');
   var weatherDialog = weather.querySelector('.weather__dialog');
   var unicornAvatar = weather.querySelector('.unicorn');
   var randomizer = weather.querySelector('.weather__randomizer');
@@ -453,6 +454,7 @@ export default function weatherInit() {
   });
 
   randomizer.addEventListener('click', function() {
+    weatherFix.className ='weather__fix weather__fix--show';
     var type = ['01d', '01n', '02d', '02n', '03d', '03n', '04d', '04n', '09d', '09n', '10d', '10n', '11d', '11n', '13d', '13n'];
     var rand = Math.floor(Math.random() * type.length);
     appData.type = type[rand];
@@ -462,6 +464,13 @@ export default function weatherInit() {
       weatherLog.textContent = 'погода сломалась';
     }
     
+    displayWeather();
+  });
+
+  weatherFix.addEventListener('click', function() {
+    appData.type = weatherData.list[0].weather[0].icon;
+    weatherLog.textContent = 'так то лучше';
+    weatherFix.className = 'weather__fix';
     displayWeather();
   });
 

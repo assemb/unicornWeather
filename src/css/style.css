@@ -332,6 +332,22 @@ body {
   bottom: 10px;
   left: 50px;
 }
+.weather__fix {
+  position: absolute;
+  font-size: 10px;
+  z-index: 50;
+  bottom: 10px;
+  left: 320px;
+  cursor: pointer;
+  transition: color 0.4s;
+  display: none;
+}
+.weather__fix:hover {
+  color: #00FF23;
+}
+.weather__fix--show {
+  display: inline-block;
+}
 .weather__randomizer {
   position: absolute;
   width: 80px;
