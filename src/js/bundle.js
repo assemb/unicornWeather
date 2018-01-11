@@ -211,7 +211,7 @@ function weatherInit() {
   xhr.onload = function() {
     cityData = JSON.parse(this.responseText);
     weatherLog.textContent = 'Город найден';
-    console.log(cityData);
+    //console.log(cityData);
     getWeather();
   };
   xhr.onerror = function() {
@@ -224,7 +224,7 @@ function weatherInit() {
     xhr.onload = function() {
       weatherLog.textContent = 'Погода получена';
       weatherData = JSON.parse(this.responseText);
-      console.log(weatherData);
+      //console.log(weatherData);
       renderScene();
     };
     xhr.onerror = function() {
@@ -498,7 +498,7 @@ function weatherInit() {
         pressure = appData.pressure;
         day = 'Сегодня ';
     }
-
+    
     switch (type) {
       case '01d':
       case '01n':
@@ -549,7 +549,7 @@ function weatherInit() {
         break;
 
       default:
-        onSky = type + ' ничего не понятно, что за погода такая.';
+        onSky = 'Что за погода, ничего не понятно.';
     }
 
     if (pressure > 986) {
@@ -597,7 +597,7 @@ function weatherInit() {
       appData.PdayCode = 2;
       return times[2];
     }
-    if ( hour > 22 && hour <= 6) {
+    if ( (hour > 22 && hour < 24) || hour <= 6) {
       appData.PdayCode = 3;
       return times[3];
     }

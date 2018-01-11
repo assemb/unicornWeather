@@ -23,7 +23,7 @@ export default function weatherInit() {
   var weatherDialogClose = weather.querySelector('.weather__dialog-close');
 
   var ipInfo = 'https://ipinfo.io/json';
-  var openWeather = 'http://api.openweathermap.org/data/2.5/forecast/daily?q=';
+  var openWeather = 'https://api.openweathermap.org/data/2.5/forecast/daily?q=';
   var apiKey = '&APPID=b1fe6ee6f440711a41fa920141f88af5&cnt=2';
   var date = new Date();
 
@@ -38,7 +38,7 @@ export default function weatherInit() {
   xhr.onload = function() {
     cityData = JSON.parse(this.responseText);
     weatherLog.textContent = 'Город найден';
-    console.log(cityData);
+    //console.log(cityData);
     getWeather();
   };
   xhr.onerror = function() {
@@ -51,7 +51,7 @@ export default function weatherInit() {
     xhr.onload = function() {
       weatherLog.textContent = 'Погода получена';
       weatherData = JSON.parse(this.responseText);
-      console.log(weatherData);
+      //console.log(weatherData);
       renderScene();
     };
     xhr.onerror = function() {
@@ -424,7 +424,7 @@ export default function weatherInit() {
       appData.PdayCode = 2;
       return times[2];
     }
-    if ( hour > 22 && hour <= 6) {
+    if ( (hour > 22 && hour < 24) || hour <= 6) {
       appData.PdayCode = 3;
       return times[3];
     }
