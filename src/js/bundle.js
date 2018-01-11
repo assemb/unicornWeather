@@ -196,7 +196,7 @@ function weatherInit() {
   var weatherDialogClose = weather.querySelector('.weather__dialog-close');
 
   var ipInfo = 'https://ipinfo.io/json';
-  var openWeather = 'http://api.openweathermap.org/data/2.5/forecast/daily?q=';
+  var openWeather = 'https://api.openweathermap.org/data/2.5/forecast/daily?q=';
   var apiKey = '&APPID=b1fe6ee6f440711a41fa920141f88af5&cnt=2';
   var date = new Date();
 
