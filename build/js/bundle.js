@@ -531,7 +531,7 @@ function weatherInit() {
 
       case '10d':
       case '10n':
-        onSky = 'будет дождь, зоник не забудь.'; 
+        onSky = 'будет дождь, зонтик не забудь.'; 
         break;
 
       case '11d':
