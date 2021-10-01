@@ -470,7 +470,7 @@ function weatherInit() {
         break;
 
       case 1:
-        greetings = 'Добрый день! ';
+        greetings = 'Добрый день, Анечка! ';
         type = appData.type;
         temp = appData.todayTemp;
         pressure = appData.pressure;
@@ -478,7 +478,7 @@ function weatherInit() {
         break;
 
       case 2:
-        greetings = 'Добрый вечер! ';
+        greetings = 'Добрый вечер, Анечка! ';
         type = appData.typeTomorrow;
         temp = appData.tomorrowTemp;
         pressure = appData.pressureTomorrow;
@@ -486,7 +486,7 @@ function weatherInit() {
         break;
 
       case 3:
-        greetings = 'Доброй ночи! ';
+        greetings = 'Доброй ночи, Анечка! ';
         type = appData.typeTomorrow;
         temp = appData.tomorrowTemp;
         pressure = appData.pressureTomorrow;
@@ -494,7 +494,7 @@ function weatherInit() {
         break;
 
       default:
-        greetings = 'Доброе утро! ';
+        greetings = 'Доброе утро, Анечка! ';
         type = appData.type;
         pressure = appData.pressure;
         day = 'Сегодня ';
